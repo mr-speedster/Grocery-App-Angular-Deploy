@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <div class="row d-flex justify-content-center mt-5">
+        <h2 class="special-title">All Categories</h2>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-3" *ngFor="let category of categories;">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top img-fluid category-image" src="{{IMG_BASE_URL + category.catImage}}" alt="">
+                    <h5 class="card-title">{{category.catName}}</h5>
+                    <button href="#" (click)="onClickCategory(category)" class="btn btn-warning">View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
