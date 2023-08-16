@@ -6,7 +6,13 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    function hidePreloader() {
+      const preloader = document.getElementById('preloader');
+      preloader.style.display = 'none';
+    }
+    window.addEventListener('load', hidePreloader);
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -38,6 +44,6 @@
       });
     });
   </script>
-<script src="runtime.a842f2c1da7314eb.js" type="module"></script><script src="polyfills.8592262c22989c38.js" type="module"></script><script src="scripts.c319a72fd7291c0b.js" defer></script><script src="main.a82332308ecd1324.js" type="module"></script></body>
+<script src="runtime.a842f2c1da7314eb.js" type="module"></script><script src="polyfills.8592262c22989c38.js" type="module"></script><script src="scripts.c319a72fd7291c0b.js" defer></script><script src="main.a0e4ba8c8da3d32a.js" type="module"></script></body>
 
 </html>
