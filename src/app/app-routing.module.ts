@@ -11,12 +11,11 @@ import { LoginPageComponent } from "./pages/login-page/login-page.component";
 import { AuthGuard } from "./guard/auth.guard";
 
 const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomePageComponent },
+    { path: '', component: HomePageComponent },
     { path: 'products/:catId', component: ProductPageComponent,canActivate:[AuthGuard] },
     { path: 'products/details/:productId', component: ProductDetailsPageComponent,canActivate:[AuthGuard] },
-    { path: 'about', component: AboutPageComponent,canActivate:[AuthGuard] },
-    { path: 'contact', component: ContactPageComponent,canActivate:[AuthGuard] },
+    { path: 'about', component: AboutPageComponent },
+    { path: 'contact', component: ContactPageComponent },
     { path: 'register', component: RegisterPageComponent },
     { path: 'login', component: LoginPageComponent },
     { path: '**', component: ErrorPageComponent }
