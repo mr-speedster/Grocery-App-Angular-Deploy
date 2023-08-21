@@ -5,14 +5,21 @@ import { ProductPageComponent } from "./pages/product-page/product-page.componen
 import { ProductDetailsPageComponent } from "./pages/product-details-page/product-details-page.component";
 import { AboutPageComponent } from "./pages/about-page/about-page.component";
 import { ContactPageComponent } from "./pages/contact-page/contact-page.component";
+import { ErrorPageComponent } from "./components/error-page/error-page.component";
+import { RegisterPageComponent } from "./pages/register-page/register-page.component";
+import { LoginPageComponent } from "./pages/login-page/login-page.component";
+import { AuthGuard } from "./guard/auth.guard";
 
 const routes: Routes = [
-    { path: '', redirectTo:'home', pathMatch:'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
-    { path: 'products/:catId', component: ProductPageComponent },
-    { path: 'products/details/:productId', component: ProductDetailsPageComponent },
-    { path: 'about', component: AboutPageComponent },
-    { path: 'contact', component: ContactPageComponent },
+    { path: 'products/:catId', component: ProductPageComponent,canActivate:[AuthGuard] },
+    { path: 'products/details/:productId', component: ProductDetailsPageComponent,canActivate:[AuthGuard] },
+    { path: 'about', component: AboutPageComponent,canActivate:[AuthGuard] },
+    { path: 'contact', component: ContactPageComponent,canActivate:[AuthGuard] },
+    { path: 'register', component: RegisterPageComponent },
+    { path: 'login', component: LoginPageComponent },
+    { path: '**', component: ErrorPageComponent }
 ]
 
 @NgModule({

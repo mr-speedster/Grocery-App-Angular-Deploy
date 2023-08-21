@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-page.component.css']
 })
 export class ProductPageComponent {
-
+  searchText: string = '';
+  selectedSubCategoryId:any = -1;
 }

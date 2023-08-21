@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,6 +19,9 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { PreLoaderComponent } from './components/pre-loader/pre-loader.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +39,17 @@ import { PreLoaderComponent } from './components/pre-loader/pre-loader.component
     SliderComponent,
     SearchBarComponent,
     FooterComponent,
-    PreLoaderComponent
+    PreLoaderComponent,
+    ErrorPageComponent,
+    RegisterPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

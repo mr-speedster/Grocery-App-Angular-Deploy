@@ -12,12 +12,21 @@ export class CategoryComponent {
 
   IMG_BASE_URL = 'http://rjtmobile.com/grocery/images/';
 
+  /**
+   * 
+   * @param dataService 
+   * @param router 
+   */
   constructor(private dataService: DataService, private router: Router) {
     this.dataService.getCategories().subscribe((response: any) => {
       this.categories = response.data;
     })
   }
 
+  /**
+   * 
+   * @param category 
+   */
   onClickCategory(category: any) {
     this.router.navigate(['/products', category.catId]);
   }
